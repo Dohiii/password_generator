@@ -98,17 +98,17 @@ function generatePassword(length, characters) {
 slider.oninput = function () {
   output.innerHTML = this.value;
   if (this.value > 11) {
-    password_image_svg.src = "/static/green.svg";
+    password_image_svg.src = "./static/green.svg";
     how_strong_password.innerText = "strong";
     how_strong_password.style.backgroundColor = "#507c5c";
   }
   if (this.value > 8 && this.value < 12) {
-    password_image_svg.src = "/static/yellow.svg";
+    password_image_svg.src = "./static/yellow.svg";
     how_strong_password.innerText = "medium";
     how_strong_password.style.backgroundColor = "#FFC61B";
   }
   if (this.value < 6) {
-    password_image_svg.src = "/static/red.svg";
+    password_image_svg.src = "./static/red.svg";
     how_strong_password.innerText = "weak";
     how_strong_password.style.backgroundColor = "#B3404A";
   }
