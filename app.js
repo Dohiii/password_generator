@@ -19,7 +19,7 @@ const abc_upper_checkbox = document.getElementById("abc_upper_checkbox");
 const abcUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const abcLower = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "0123456789";
-const specialCharacters = "!@#$%^&*()_+";
+const specialCharacters = "!@#$%^&*";
 
 let passwordOptions = {
   abcUpper: abcUpper,
@@ -84,7 +84,9 @@ copyBtn.addEventListener("click", copy);
 
 // Random password generator
 
-const allChars = Object.values(passwordOptions).join();
+const allChars = Object.values(passwordOptions).join().replaceAll(",", "");
+
+console.log(allChars);
 
 function generatePassword(length, characters) {
   let result = " ";
