@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Random Password Generator</h1>
+      <p>Create strong and secure passwords to keep yor account safe</p>
+      <div id="password_image">
+        <img id="password_image_svg" src="/static/green.svg" alt="" srcset="" />
+      </div>
+
+
+<div class="password_container">
+    <div id="password">asfkas@fsafF</div>
+    <div id="how_strong_password"></div>
+
+    <div class="popup" onclick="popupFunc()">
+      <button id="copy">
+        <i class="fa-regular fa-copy"></i>
+    </button>
+      <span class="popuptext" id="myPopup">Copied to</span>
+    </div>
+
+   
+    <button id="reload_button"><i id="reload_svg" class="fa-solid fa-sync"></i></button>
+</div>
+
+<div class="slidecontainer">
+  <div id="length">Password length:
+    <b> <span id="lenght_value"></span></b>
+   </div>
+  <input autocomplete="off" type="range" min="5" max="25" value="12"  class="slider" id="my_range">
+</div>
+
+
+<div class="checkboxes">
+  <div id="char_used_text">Characters used:</div>
+
+<div><input type="checkbox" id="abc_upper_checkbox" name="abc_upper" value="abc_upper" checked >
+  <label for="abc_upper_checkbox">ABC</label><br></div>
+      
+    <div id="abc_lower">  <input type="checkbox" id="abc_lower_checkbox" name="abc_lower" value="abc_lower" checked>
+      <label for="abc_lower_checkbox">abc</label><br></div>
+
+    <div><input type="checkbox" id="numbers_checkbox" name="numbers" value="numbers" checked>
+      <label for="numbers_checkbox">123</label><br></div>
+      
+    <div>
+      <input type="checkbox" id="special_chars_checkbox" name="special_chars" value="special_chars" checked>
+      <label for="special_chars_checkbox">#$&</label><br></div>
+
+    
+
+      
+    
+
+      
+  
+</div>
+
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/909a5500ae.js" crossorigin="anonymous"></script>
+  </body>
+</html>

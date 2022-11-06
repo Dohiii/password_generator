@@ -1,0 +1,200 @@
+.green {
+  color: #507c5c;
+}
+
+body {
+  background-color: #fff5ee;
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#password_image {
+  width: 200px;
+  height: 200px;
+}
+
+#password_image img {
+  width: 100%;
+  height: 100%;
+}
+
+/* password_container */
+
+.password_container {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border: 0.5px solid rgb(152, 148, 148);
+  border-radius: 18px;
+  align-items: center;
+  width: 80%;
+}
+
+#password {
+  padding: 12px;
+}
+
+#how_strong_password {
+  margin-left: auto;
+  margin-right: 12px;
+  background-color: #507c5c;
+  padding: 4px 8px;
+  color: #fff;
+  border-radius: 8px;
+}
+
+#reload_button {
+  border: none;
+  background-color: #fff;
+  padding: 0;
+  margin-right: 12px;
+}
+#copy {
+  border: none;
+  background-color: #fff;
+  padding: 0;
+  margin-right: 12px;
+}
+
+/* slider */
+
+.slidecontainer {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 2rem 1rem;
+}
+
+#length {
+  width: 45%;
+}
+
+#my_range {
+  width: 55%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04aa6d;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #507c5c;
+  cursor: pointer;
+}
+
+/* checkboxes */
+.checkboxes {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 1rem 1rem;
+}
+
+#char_used_text {
+  margin-right: 2rem;
+}
+
+@media (min-width: 600px) {
+  .container {
+    max-width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+}
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #507c5c;
+  color: #fff5ee;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
