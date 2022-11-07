@@ -37,6 +37,8 @@ function getValueCheckbox() {
   return result;
 }
 
+const allChars = getValueCheckbox();
+
 // Slider
 how_strong_password.innerText = "strong";
 output.innerHTML = slider.defaultValue; // Display the default slider value
