@@ -37,8 +37,6 @@ function getValueCheckbox() {
   return result;
 }
 
-const allChars = getValueCheckbox();
-
 // Slider
 how_strong_password.innerText = "strong";
 output.innerHTML = slider.defaultValue; // Display the default slider value
@@ -79,17 +77,7 @@ copyBtn.addEventListener("click", copy);
 
 // console.log(allChars);
 
-function generatePassword(length) {
-  const characters = getValueCheckbox();
-  let result = " ";
-  const charactersLength = characters.length;
-  for (let i = 0; i < length; i++) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-  }
-  password.innerText = result;
-}
-
-slider.oninput = function () {
+slider.oninput = async function () {
   output.innerHTML = this.value;
   if (this.value > 11) {
     password_image_svg.src = "./static/green.svg";
@@ -107,12 +95,7 @@ slider.oninput = function () {
     how_strong_password.style.backgroundColor = "#B3404A";
   }
 
-  let result = " ";
-  const charactersLength = allChars.length;
-  for (let i = 0; i < this.value; i++) {
-    result += allChars.charAt(Math.floor(Math.random() * charactersLength));
-  }
-  password.innerText = result;
+  await generatePassword(Number(output.innerText));
 };
 
 const popupFunc = async () => {
@@ -121,3 +104,13 @@ const popupFunc = async () => {
   await delay(2);
   popup.classList.toggle("show");
 };
+
+function generatePassword(length) {
+  const characters = getValueCheckbox();
+  let result = " ";
+  const charactersLength = characters.length;
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  password.innerText = result;
+}
